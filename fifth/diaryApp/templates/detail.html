@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>My Diary</title>
+        <style type="text/css">
+
+            header {
+                font-family: '나눔명조';
+                font-size: 2em;
+                font-weight: bold;
+                letter-spacing: 20px; 
+                text-align: center;
+                background-color:rgb(253, 218, 177);
+                margin: 70px 270px;
+                height: 50px;
+            }
+    
+            body {
+                background: #C0FAE7;
+                font-family: '나눔고딕';
+            }
+            article {
+                background: #fbffff;
+                border-radius: 10px;
+                border-style: ridge;
+                padding: 70px;
+                margin: 70px 270px;
+            }
+
+            article h2 {
+                color: #422b09;
+                background-color: #C0FAE7;
+            }
+
+            article h3 {
+                font-family: '나눔명조';
+                text-align: center;
+                text-decoration: underline;
+            }
+            footer {
+                font-family: '나눔고딕';
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <p>장한빛의생각조각</p>
+        </header>
+        <article>
+            
+            {% extends 'base.html' %} 
+            {% block content %} 
+
+            <h3>자세한 본문 내용</h3><br>
+            <h2><small>제목: </small> {{diary.title}} </h2>
+            <p>작성 날짜: {{diary.pub_date}} </p>
+            <p>자세한 본문: {{diary.body}} </p>
+
+            {% endblock %}
+            
+        </article>
+        <footer>Copyright 2021. 장한빛. All rights reserved</footer>
+    </body>
+    
+</html>
